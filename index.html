@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="brain.png" sizes="16x16 32x32 64x64" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f5f8fa;
+        }
+
+        #sketch-holder {
+            width: min-content;
+            margin: 15px auto 15px auto;
+        }
+
+        .navbar {
+            background-color: #fff;
+            -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+    <title>Concentration Game</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Concentration Game</a>
+        <ul class="navbar-nav ml-auto">
+            <li><a class="nav-link" id="reset" href="#">New Game</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div id="sketch-holder">
+                <!-- Our sketch will go here! -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/addons/p5.dom.min.js"></script>
+<script src="sketch.js"></script>
+<script src="cell.js"></script>
+<script>
+    // on click rest btn, redraw a new canvas (start new game)
+    document.getElementById("reset").onclick = function () {
+        reset();
+    };
+</script>
+</body>
+</html>
